@@ -45,11 +45,14 @@ public class App {
 //            director8.getMovies().add(movie1);
 
 //            6
-            Director director2 = currentSession.get(Director.class, 2);
-            Movie movie2 = currentSession.get(Movie.class, 2);
-            movie2.getDirector().getMovies().remove(movie2);
-            movie2.setDirector(director2);
-            director2.getMovies().add(movie2);
+//            Director director2 = currentSession.get(Director.class, 2);
+//            Movie movie2 = currentSession.get(Movie.class, 2);
+//            movie2.getDirector().getMovies().remove(movie2);
+//            movie2.setDirector(director2);
+//            director2.getMovies().add(movie2);
+//            7
+            Director director1 = currentSession.get(Director.class, 1);
+            currentSession.remove(director1);
 
             currentSession.getTransaction().commit();
         } finally {
